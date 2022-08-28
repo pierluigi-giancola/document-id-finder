@@ -1,0 +1,20 @@
+{
+  "name": "document-id-finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierluigi-giancola/document-id-finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pierluigi-giancola/document-id-finder/issues"
+  },
+  "homepage": "https://github.com/pierluigi-giancola/document-id-finder#readme"
+}
