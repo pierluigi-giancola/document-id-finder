@@ -4,7 +4,8 @@ if (!window.hashtagFinder) {
     // Initialize the extension    
     document.addEventListener('keydown', (e) => {
         const isAltShiftE = e.altKey && e.shiftKey && e.key === 'E'
-        if (isAltShiftE) {
+        console.log('window.hashtagFinder', window.hashtagFinder)
+        if (isAltShiftE && window.hashtagFinder) {
             if (!window.hashtagFinder.active) {
                 window.hashtagFinder.active = true;
                 const searchedElement = [
@@ -21,7 +22,7 @@ if (!window.hashtagFinder) {
                     'ol',
                 ]
                 const query = searchedElement.map(element => `${element}[id]`).join(', ');
-                document.body.querySelectorAll(searchedElement).forEach((h) => {
+                document.body.querySelectorAll(query).forEach((h) => {
                     if (h.id) {
                         console.log('h', h)
                         const hash = h.id;
@@ -44,9 +45,9 @@ if (!window.hashtagFinder) {
     );
 }
 
-
-window.hashtagFinder = window.hashtagFinder ?? {};
-
-window.hashtagFinder.loaded = true;
-
-window.hashtagFinder.active = false;
+if (!window.hashtagFinder) {
+    window.hashtagFinder = {
+        loaded: true,
+        active: false
+    };
+}
